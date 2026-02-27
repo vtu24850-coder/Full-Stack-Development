@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Feedback | Premium Interaction</title>
+    <meta name="description" content="Experience a highly interactive and beautifully designed feedback form with real-time validation and smooth animations.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="container">
+        <main class="form-card" id="formCard">
+            <header>
+                <h1>Get in Touch</h1>
+                <p class="subtitle">We'd love to hear your thoughts. Please fill out the form below.</p>
+            </header>
+
+            <form id="feedbackForm">
+                <div class="input-group" id="nameGroup">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="John Doe" autocomplete="off">
+                    <span class="validation-message" id="nameError">Name must be at least 3 characters.</span>
+                </div>
+
+                <div class="input-group" id="emailGroup">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="john@example.com" autocomplete="off">
+                    <span class="validation-message" id="emailError">Please enter a valid email address.</span>
+                </div>
+
+                <div class="input-group" id="messageGroup">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" rows="4" placeholder="Tell us what's on your mind..."></textarea>
+                    <span class="validation-message" id="messageError">Message cannot be empty.</span>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <i data-lucide="send"></i>
+                    Submit Feedback
+                </button>
+                <small class="hint">Double-click to submit securely</small>
+            </form>
+        </main>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i data-lucide="check"></i>
+            </div>
+            <h2>Thank You!</h2>
+            <p>Your feedback has been successfully submitted. We appreciate your input.</p>
+            <button class="ok-btn" id="modalClose">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
